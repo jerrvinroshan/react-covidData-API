@@ -1,4 +1,4 @@
-import '../assets/style.css'
+import { Button, TextField } from '@mui/material';
 
 const CountryInput = ({ fetchData }) => {
     const handleFetch = () => {
@@ -7,13 +7,18 @@ const CountryInput = ({ fetchData }) => {
 
     return (
         <div className='Container'>
-            <input
+            <TextField
                 id="countryInput"
                 label="Enter country name"
             />
-            <button type='button' id='outputDisplay' onClick={handleFetch}>
+            <Button 
+            type='button' 
+            id='outputDisplay' 
+            variant='contained'
+             size="medium"
+            onClick={handleFetch}>
                 Fetch Data
-            </button>
+            </Button>
         </div>
     );
 };

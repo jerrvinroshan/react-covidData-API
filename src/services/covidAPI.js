@@ -12,6 +12,7 @@ export const fetchCovidData = async (country) => {
   };
   try {
     const response = await axios.get(url, options);
+    console.log(response.data);
     return response.data[0];
   } catch (error) {
     console.error(error);
