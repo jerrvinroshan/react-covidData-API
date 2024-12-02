@@ -1,6 +1,6 @@
 import React from "react";
-import CountryInput from "../component/CountryInput";
-import OutputDisplay from "../component/OutputDisplay";
+import CountryInput from "../component/CovidSearch/CountryInput";
+import OutputDisplay from "../component/CovidSearch/OutputDisplay";
 import { useCovidData } from "../hooks/useCovidData";
 import '../assets/style.css'
 
