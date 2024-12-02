@@ -6,18 +6,18 @@ export const useCovidData = () => {
 
     const fetchData = async () => {
         const country = document.getElementById('countryInput').value;
-        let storedData = JSON.parse(sessionStorage.getItem('covidData')) || {};
+        // let storedData = JSON.parse(sessionStorage.getItem('covidData')) || {};
 
-        if (storedData[country]) {
-            console.log('Data fetched from sessionStorage:', storedData[country]);
-            setData(storedData[country]);
-            return
-        }
+        // if (storedData[country]) {
+        //     console.log('Data fetched from sessionStorage:', storedData[country]);
+        //     setData(storedData[country]);
+        //     return
+        // }
 
         const results = await fetchCovidData(country);
         if(results){
-            storedData[country] = results;
-            sessionStorage.setItem('covidData', JSON.stringify(storedData));
+            // storedData[country] = results;
+            // sessionStorage.setItem('covidData', JSON.stringify(storedData));
             setData(results);
         }
     };
