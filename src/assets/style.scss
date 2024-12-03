@@ -6,3 +6,13 @@
 .FormContainer {
   gap: 2rem;
 }
+.BikeModelContainer{
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+}
+
+.BikeData{
+  display: flex;
+  gap: 2rem;
+}

@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
 
-const truncateText = (text, maxLength) => {
+const shortText = (text, maxLength) => {
     if (text.length <= maxLength) return text;
     return `${text.slice(0, maxLength)}...`;
 };
@@ -13,8 +13,8 @@ const JobList = ({ results }) => {
                 <li key={index}>
                     <strong>Title:</strong> {job.title} <br />
                     <strong>Company:</strong> {job.company} <br />
-                    <strong>Salary:</strong> {job.salary || 'Not specified'} <br />
-                    <strong>Location:</strong> {job.location} <br />
+                    <strong>Salary Range:</strong> {job.salaryRange || 'Not specified'} <br />
+                    <strong>Location:</strong> {job.location || "Not Mentioned"} <br />
                     <strong>Employment Type:</strong> {job.employmentType} <br />
                     <JobDescription description={job.description} />
                     <hr />
@@ -35,7 +35,7 @@ const JobDescription = ({ description }) => {
     return (
         <div>
             <strong>Description:</strong>{' '}
-            {isExpanded ? description : truncateText(description, maxLength)}
+            {isExpanded ? description : shortText(description, maxLength)}
             {description.length > maxLength && (
                 <Button variant='outlined' onClick={handleToggle} style={{ marginLeft: '5px', cursor: 'pointer' }}>
                     {isExpanded ? 'Show Less' : 'Read More'}

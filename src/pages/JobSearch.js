@@ -9,7 +9,7 @@ const JobSearch = () => {
         query: '',
         location: '',
         autoTranslateLocation: 'false',
-        remoteOnly: 'false',
+        remoteOnly: 'true',
         employmentTypes: 'fulltime;parttime;intern;contractor',
     });
 
@@ -25,6 +25,7 @@ const JobSearch = () => {
 
     return (
         <div className="job-search-container">
+            <h1>Job Data Fetcher</h1>
             <JobSearchForm
                 formData={formData}
                 handleChange={handleChange}
